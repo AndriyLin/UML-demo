@@ -1,0 +1,56 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.center {
+			margin: auto;
+		}
+	</ui:style>
+	<g:HTMLPanel styleName="{style.center}">
+		<g:Grid styleName="{style.center}">
+			<g:row>
+				<g:cell>
+					<div>用户名：</div>
+				</g:cell>
+				<g:customCell>
+					<g:TextBox></g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>密码：</div>
+				</g:cell>
+				<g:customCell>
+					<g:PasswordTextBox></g:PasswordTextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>自动登录：</div>
+				</g:cell>
+				<g:customCell>
+					<g:CheckBox></g:CheckBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>验证码：</div>
+				</g:cell>
+				<g:customCell>
+					<g:TextBox></g:TextBox>
+				</g:customCell>
+				<g:customCell>
+					<g:Image url="http://www.oschina.com/uploads/allimg/Image2/105836496.png"></g:Image>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:HorizontalPanel styleName="{style.center}">
+			<g:Button>登录</g:Button>
+			<g:Button>注册</g:Button>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

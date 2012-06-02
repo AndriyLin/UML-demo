@@ -1,0 +1,94 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.margin {
+			margin: 10px;
+		}
+		
+		.selected {
+			background-color: yellow;
+		}
+		.grid {
+			margin: 5px;
+			border-width: thin;
+			border-style: solid;
+		}
+		.title {
+			font-weight: bold;
+			font-size: x-large;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{style.title}">采购管理</g:Label>
+		<g:HorizontalPanel>
+			<g:Button>查询采购入库</g:Button>
+			<g:Button styleName="{style.selected}">新增采购入库</g:Button>
+			<g:Button>修改采购入库</g:Button>
+			<g:Button>删除采购入库</g:Button>
+		</g:HorizontalPanel>
+		<g:Button styleName="{style.margin}">导入</g:Button>
+		<g:Grid>
+			<g:row>
+				<g:cell>
+					<div>请选择供货商：</div>
+				</g:cell>
+				<g:customCell>
+					<g:ListBox ui:field="purveyorList"></g:ListBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>请选择配送中心：</div>
+				</g:cell>
+				<g:customCell>
+					<g:ListBox ui:field="centerList"></g:ListBox>
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+
+		<g:Grid styleName="{style.grid}">
+			<g:row>
+				<g:cell>
+					<div>商品名称：</div>
+				</g:cell>
+				<g:customCell>
+					<g:TextBox ui:field="nameBox"></g:TextBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>商品类型</div>
+				</g:cell>
+				<g:customCell>
+					<g:ListBox ui:field="typeList"></g:ListBox>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>已有数量</div>
+				</g:cell>
+				<g:cell>
+					<div>0</div>
+				</g:cell>
+			</g:row>
+			<g:row>
+				<g:cell>
+					<div>新增数量</div>
+				</g:cell>
+				<g:customCell>
+					<g:TextBox ui:field="amountBox"></g:TextBox>
+				</g:customCell>
+			</g:row>
+
+		</g:Grid>
+		<g:HorizontalPanel>
+			<g:Button ui:field="saveButton">保存</g:Button>
+			<g:Button ui:field="cancelButton">取消</g:Button>
+		</g:HorizontalPanel>
+	</g:HTMLPanel>
+</ui:UiBinder> 

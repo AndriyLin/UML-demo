@@ -1,0 +1,2 @@
+serviceClass: com.andriy.client.GreetingService
+path: EFA825A51890D7E17F984731CC87DDC2.gwt.rpc

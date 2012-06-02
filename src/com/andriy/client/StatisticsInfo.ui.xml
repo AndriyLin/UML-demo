@@ -1,0 +1,58 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.datepicker.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.grid {
+			margin-top: 10px;
+			margin-bottom: 10px;
+		}
+		.selected {
+			background-color: yellow;
+		}
+		.title {
+			font-weight: bold;
+			font-size: x-large;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:HorizontalPanel>
+			<g:Button>销售收入</g:Button>
+			<g:Button styleName="{style.selected}">进货成本</g:Button>
+			<g:Button>经营成本</g:Button>
+			<g:Button>纯利润</g:Button>
+		</g:HorizontalPanel>
+		<g:Grid styleName="{style.grid}">
+			<g:row>
+				<g:customCell>
+					<g:Label styleName="{style.title}">XXX文具有限公司</g:Label>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<g:HorizontalPanel>
+						<g:InlineLabel>起始时间：</g:InlineLabel>
+						<g:Label ui:field="startTimeLabel"></g:Label>
+					</g:HorizontalPanel>
+				</g:customCell>
+				<g:customCell>
+					<g:HorizontalPanel>
+						<g:InlineLabel>截止时间：</g:InlineLabel>
+						<g:Label ui:field="endTimeLabel"></g:Label>
+					</g:HorizontalPanel>
+				</g:customCell>
+			</g:row>
+			<g:row>
+				<g:customCell>
+					<p1:DatePicker ui:field="startTimePicker" />
+				</g:customCell>
+				<g:customCell>
+					<p1:DatePicker ui:field="endTimePicker" />
+				</g:customCell>
+			</g:row>
+		</g:Grid>
+		<g:Button ui:field="reportButton" >统计</g:Button>
+	</g:HTMLPanel>
+</ui:UiBinder> 

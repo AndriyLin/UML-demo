@@ -1,0 +1,25 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		.margin {
+			margin: 10px;
+		}
+		.title {
+			font-weight: bold;
+			font-size: large;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{style.title}">客户信息操作</g:Label>
+		<g:HorizontalPanel>
+			<g:Button>新增客户</g:Button>
+			<g:Button>删除客户</g:Button>
+		</g:HorizontalPanel>
+		
+		<p1:CellList styleName="{style.margin}" ui:field="userList"></p1:CellList>
+	</g:HTMLPanel>
+</ui:UiBinder> 

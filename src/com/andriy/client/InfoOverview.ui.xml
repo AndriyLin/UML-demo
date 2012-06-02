@@ -1,0 +1,31 @@
+<!DOCTYPE ui:UiBinder SYSTEM "http://dl.google.com/gwt/DTD/xhtml.ent">
+<ui:UiBinder xmlns:ui="urn:ui:com.google.gwt.uibinder"
+	xmlns:g="urn:import:com.google.gwt.user.client.ui" xmlns:p1="urn:import:com.google.gwt.user.cellview.client">
+	<ui:style>
+		.important {
+			font-weight: bold;
+		}
+		
+		.margin {
+			margin: 10px;
+		}
+		
+		.selected {
+			background-color: yellow;
+		}
+		.title {
+			font-size: large;
+			font-weight: bold;
+		}
+	</ui:style>
+	<g:HTMLPanel>
+		<g:Label styleName="{style.title}">信息总览</g:Label>
+		<g:HorizontalPanel>
+			<g:Button width="120px" styleName="{style.selected}"
+				ui:field="shopsButton">店铺信息</g:Button>
+			<g:Button width="120px" ui:field="deliveryButton">配送中心信息</g:Button>
+			<g:Button width="120px" ui:field="serviceButton">已开启服务信息</g:Button>
+		</g:HorizontalPanel>
+		<p1:CellList ui:field="cellList" styleName="{style.margin}"/>
+	</g:HTMLPanel>
+</ui:UiBinder> 
